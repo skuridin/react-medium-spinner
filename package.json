@@ -2,6 +2,12 @@
   "name": "react-medium-spinner",
   "version": "0.0.1",
   "description": "React medium-like spinner component",
+  "homepage": "https://skurid.in/react-medium-spinner/",
+  "bugs": {
+    "email": "i@skurid.in",
+    "url": "https://github.com/skuridin/react-medium-spinner/issues"
+  },
+  "files": "dist/",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --progress --colors",
@@ -14,7 +20,11 @@
     "spinner",
     "medium"
   ],
-  "author": "Evgeniy Skuridin <i@skurid.in>",
+  "author": {
+    "name": "Evgeniy Skuridin",
+    "email": "i@skurid.in",
+    "url": "https://skurid.in/"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:skuridin/react-medium-spinner.git"
