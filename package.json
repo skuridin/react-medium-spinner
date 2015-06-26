@@ -14,6 +14,10 @@
     "medium"
   ],
   "author": "Evgeniy Skuridin <i@skurid.in>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:skuridin/react-medium-spinner.git"
+  },
   "license": "MIT",
   "dependencies": {
     "react": "^0.13.3"
