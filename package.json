@@ -2,8 +2,9 @@
   "name": "react-medium-spinner",
   "version": "0.0.1",
   "description": "React medium-like spinner component",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "webpack --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,5 +22,14 @@
   "license": "MIT",
   "dependencies": {
     "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "css-loader": "^0.15.1",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "jsx-loader": "^0.13.2",
+    "node-libs-browser": "^0.5.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.12"
   }
 }
