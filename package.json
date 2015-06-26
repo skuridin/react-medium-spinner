@@ -1,13 +1,16 @@
 {
   "name": "react-medium-spinner",
-  "version": "0.0.2",
+  "version": "0.1.2",
   "description": "React medium-like spinner component",
   "homepage": "https://skurid.in/react-medium-spinner/",
   "bugs": {
     "email": "i@skurid.in",
     "url": "https://github.com/skuridin/react-medium-spinner/issues"
   },
-  "files": ["dist/index.js", "dist/style.css"],
+  "files": [
+    "dist/index.js",
+    "dist/style.css"
+  ],
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --progress --colors",
