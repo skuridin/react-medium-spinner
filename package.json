@@ -8,10 +8,10 @@
     "url": "https://github.com/skuridin/react-medium-spinner/issues"
   },
   "files": [
-    "dist/index.js",
-    "dist/style.css"
+    "index.js",
+    "style.css"
   ],
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -42,6 +42,7 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.2",
-    "webpack": "^1.9.12"
+    "webpack": "^1.9.12",
+    "webpack-dev-server": "^1.9.0"
   }
 }

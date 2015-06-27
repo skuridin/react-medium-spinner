@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname + '/src',
   entry: "./index.jsx",
   output: {
-    path: __dirname + '/dist',
+    path: __dirname,
     filename: "index.js",
     library: 'ReactMediumSpinner',
     libraryTarget: "umd"
