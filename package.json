@@ -42,7 +42,6 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.2",
-    "style-loader": "^0.12.3",
     "webpack": "^1.9.12"
   }
 }
