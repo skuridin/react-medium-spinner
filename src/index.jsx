@@ -5,7 +5,8 @@ module.exports = React.createClass({
     return {
       active: false,
       speed: 20,
-      color: "#60d778"
+      color: "#60d778",
+      height: "2px"
     };
   },
   getInitialState: function() {
@@ -44,7 +45,7 @@ module.exports = React.createClass({
       left: this.state.left + '%',
       right: '0px',
       width: this.state.width + '%',
-      height: '2px',
+      height: this.params.height,
       backgroundColor: this.props.color,
       zIndex: 800
     };
