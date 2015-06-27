@@ -34,14 +34,11 @@ module.exports = React.createClass({
 
 ## Properties
 
-#### props.active
-Boolean, default: false
+`props.active` Boolean, default: false
 
-#### props.color
-String, css color, default: "#60d778"
+`props.color` String, css color, default: "#60d778"
 
-#### props.speed
-Integer, speed in ms, default: 1
+`props.speed` Integer, speed in ms, default: 1
 
 ## License
 
