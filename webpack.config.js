@@ -1,13 +1,14 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var externals = [],
+    entry = "./dev.jsx";
 
-var externals = [];
 if(process.env.NODE_ENV === "production") {
   externals.push("react");
+  entry = "./index.jsx";
 }
 
 module.exports = {
   context: __dirname + '/src',
-  entry: "./index.jsx",
+  entry: entry,
   output: {
     path: __dirname,
     filename: "index.js",
@@ -17,11 +18,7 @@ module.exports = {
   externals: externals,
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: "jsx" },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('css!autoprefixer') }
+      { test: /\.jsx$/, loader: "jsx" }
     ]
-  },
-  plugins: [
-    new ExtractTextPlugin("style.css")
-  ]
+  }
 };
