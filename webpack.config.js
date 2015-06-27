@@ -1,9 +1,11 @@
 var externals = [],
-    entry = "./dev.jsx";
+    entry = "./dev.jsx",
+    output = 'example.js';
 
 if(process.env.NODE_ENV === "production") {
   externals.push("react");
   entry = "./index.jsx";
+  output = 'index.js'
 }
 
 module.exports = {
@@ -11,7 +13,7 @@ module.exports = {
   entry: entry,
   output: {
     path: __dirname,
-    filename: "index.js",
+    filename: output,
     library: 'ReactMediumSpinner',
     libraryTarget: "umd"
   },
