@@ -13,7 +13,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress --colors",
+    "build": "NODE_ENV=production webpack -p --optimize-occurence-order --optimize-dedupe --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

@@ -1,5 +1,10 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
+var externals = [];
+if(process.env.NODE_ENV === "production") {
+  externals.push("react");
+}
+
 module.exports = {
   context: __dirname + '/src',
   entry: "./index.jsx",
@@ -9,7 +14,7 @@ module.exports = {
     library: 'ReactMediumSpinner',
     libraryTarget: "umd"
   },
-  externals: ["react"],
+  externals: externals,
   module: {
     loaders: [
       { test: /\.jsx$/, loader: "jsx" },
