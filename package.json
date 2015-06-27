@@ -8,8 +8,7 @@
     "url": "https://github.com/skuridin/react-medium-spinner/issues"
   },
   "files": [
-    "index.js",
-    "style.css"
+    "index.js"
   ],
   "main": "index.js",
   "scripts": {
