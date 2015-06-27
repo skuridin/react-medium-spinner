@@ -21,6 +21,8 @@ module.exports = React.createClass({
     clearInterval(this.interval);
   },
   animate: function() {
+    if(this.props.active !== true) return false;
+
     var state = this.state;
 
     if(state.left === 0 && state.width < 100) {
