@@ -1,6 +1,8 @@
 # React Medium Spinner
 
 React medium-like spinner component.  
+
+## Demo
 [Live demo](https://skurid.in/react-medium-spinner/)
 
 ## Installation
