@@ -4,7 +4,7 @@ module.exports = React.createClass({
   getDefaultProps: function() {
     return {
       active: false,
-      speed: 25,
+      speed: 20,
       color: "#60d778"
     };
   },

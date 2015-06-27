@@ -38,7 +38,7 @@ module.exports = React.createClass({
 
 `props.color` String, css color, default: "#60d778"
 
-`props.speed` Integer, speed in ms, default: 25
+`props.speed` Integer, speed in ms, default: 20
 
 ## License
 
