@@ -1,9 +1,51 @@
 var React = require('react');
 
 module.exports = React.createClass({
+  getDefaultProps: function() {
+    return {
+      active: false,
+      speed: 1,
+      color: "#60d778"
+    };
+  },
+  getInitialState: function() {
+    return {
+      width: 0,
+      left: 0
+    };
+  },
+  componentDidMount: function() {
+    this.interval = setInterval(this.animate, this.props.speed);
+  },
+  componentWillUnmount: function() {
+    clearInterval(this.interval);
+  },
+  animate: function() {
+    var state = this.state;
+
+    if(state.left === 0 && state.width < 100) {
+      state.width++;
+    } else if(state.width <= 100 && state.left < 100) {
+      state.left++;
+      state.width--;
+    } else if(state.left === 100 && state.width === 0) {
+      state.left = 0;
+    }
+
+    this.setState(state);
+  },
   render: function() {
-    var klass = "medium-spinner";
-    if(this.props.active === true) klass += " active";
-    return <div className={klass} />;
+    var style = {
+      display: (this.props.active) ? 'block' : 'none',
+      position: 'fixed',
+      top: '0px',
+      left: this.state.left + '%',
+      right: '0px',
+      width: this.state.width + '%',
+      height: '2px',
+      backgroundColor: this.props.color,
+      zIndex: 800
+    };
+    return <div style={style} />;
   }
 });
