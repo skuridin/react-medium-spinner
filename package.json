@@ -15,6 +15,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p --optimize-occurence-order --optimize-dedupe --progress -c",
     "dev": "NODE_ENV=development webpack-dev-server --host 0.0.0.0 -d --progress",
+    "example": "NODE_ENV=development webpack -p --optimize-occurence-order --optimize-dedupe --progress -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
