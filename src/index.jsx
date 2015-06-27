@@ -4,7 +4,7 @@ module.exports = React.createClass({
   getDefaultProps: function() {
     return {
       active: false,
-      speed: 1,
+      speed: 25,
       color: "#60d778"
     };
   },
@@ -24,10 +24,10 @@ module.exports = React.createClass({
     var state = this.state;
 
     if(state.left === 0 && state.width < 100) {
-      state.width++;
+      state.width+=4;
     } else if(state.width <= 100 && state.left < 100) {
-      state.left++;
-      state.width--;
+      state.left+=4;
+      state.width-=4;
     } else if(state.left === 100 && state.width === 0) {
       state.left = 0;
     }
