@@ -45,7 +45,7 @@ module.exports = React.createClass({
       left: this.state.left + '%',
       right: '0px',
       width: this.state.width + '%',
-      height: this.params.height,
+      height: this.props.height,
       backgroundColor: this.props.color,
       zIndex: 800
     };
