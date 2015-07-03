@@ -1,6 +1,7 @@
-var externals = [],
-    entry = "./dev.jsx",
-    output = 'example.js';
+var externals  = [],
+    entry      = "./dev.jsx",
+    output     = 'example.js',
+    HtmlPlugin = require('html-webpack-plugin');
 
 if(process.env.NODE_ENV === "production") {
   externals.push("react");
@@ -22,5 +23,14 @@ module.exports = {
     loaders: [
       { test: /\.jsx$/, loader: "babel" }
     ]
-  }
+  },
+  plugins: [
+    new HtmlPlugin({
+      template: './src/template.html',
+      hash: true,
+      minify: {
+        collapseWhitespace: true
+      }
+    })
+  ]
 };
