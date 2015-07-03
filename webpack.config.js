@@ -5,7 +5,7 @@ var externals = [],
 if(process.env.NODE_ENV === "production") {
   externals.push("react");
   entry = "./index.jsx";
-  output = 'index.js'
+  output = 'index.js';
 }
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   externals: externals,
   module: {
     loaders: [
-      { test: /\.jsx$/, loader: "jsx" }
+      { test: /\.jsx$/, loader: "babel" }
     ]
   }
 };
