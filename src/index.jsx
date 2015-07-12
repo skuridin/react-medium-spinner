@@ -1,31 +1,19 @@
-var React = require('react');
+import React from 'react';
 
-module.exports = React.createClass({
-  getDefaultProps: function() {
-    return {
-      active: false,
-      speed: 20,
-      color: "#60d778",
-      height: "2px"
-    };
-  },
-  getInitialState: function() {
-    return {
-      width: 0,
-      left: 0
-    };
-  },
-  componentDidMount: function() {
-    this.interval = setInterval(this.animate, this.props.speed);
-  },
-  componentWillUnmount: function() {
+export default class ReactMediumSpinner extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { width: 0, left: 0 };
+  }
+  componentDidMount() {
+    this.interval = setInterval(this.animate.bind(this), this.props.speed);
+  }
+  componentWillUnmount() {
     clearInterval(this.interval);
-  },
-  animate: function() {
+  }
+  animate() {
     if(this.props.active !== true) return false;
-
-    var state = this.state;
-
+    let state = this.state;
     if(state.left === 0 && state.width < 100) {
       state.width+=4;
     } else if(state.width <= 100 && state.left < 100) {
@@ -34,11 +22,10 @@ module.exports = React.createClass({
     } else if(state.left === 100 && state.width === 0) {
       state.left = 0;
     }
-
     this.setState(state);
-  },
-  render: function() {
-    var style = {
+  }
+  render() {
+    const style = {
       display: (this.props.active) ? 'block' : 'none',
       position: 'fixed',
       top: '0px',
@@ -51,4 +38,11 @@ module.exports = React.createClass({
     };
     return <div style={style} />;
   }
-});
+}
+
+ReactMediumSpinner.defaultProps = {
+  active: false,
+  speed: 20,
+  color: "#60d778",
+  height: "2px"
+};
