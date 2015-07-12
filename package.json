@@ -35,6 +35,9 @@
     "url": "git@github.com:skuridin/react-medium-spinner.git"
   },
   "license": "MIT",
+  "jshintConfig": {
+    "esnext": true
+  },
   "dependencies": {
     "react": "0.13.x"
   },
