@@ -15,21 +15,13 @@ npm i react-medium-spinner --save
 ## Usage
 
 ```jsx
-var React         = require('react'),
-    MediumSpinner = require('react-medium-spinner');
+import React from 'react';
+import MediumSpinner from 'react-medium-spinner';
 
-module.exports = React.createClass({
-  render: function() {
-    return (
-      <div className="wrapper">
-        <MediumSpinner active={true}/>
-        <div className="content">
-          // bla bla bla
-        </div>
-      </div>
-    );
-  }
-});
+React.render(
+  <MediumSpinner active={true}/>,
+  document.getElementById('app')
+);
 ```
 
 ## Properties
