@@ -29,9 +29,9 @@ export default class ReactMediumSpinner extends React.Component {
       display: (this.props.active) ? 'block' : 'none',
       position: 'fixed',
       top: '0px',
-      left: this.state.left + '%',
+      left: `${this.state.left}%`,
       right: '0px',
-      width: this.state.width + '%',
+      width: `${this.state.width}%`,
       height: this.props.height,
       backgroundColor: this.props.color,
       zIndex: 800
