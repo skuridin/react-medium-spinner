@@ -138,6 +138,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  color: '#60d778',
 	  height: '2px'
 	};
+
+	ReactMediumSpinner.propTypes = {
+	  active: _react2['default'].PropTypes.bool,
+	  speed: _react2['default'].PropTypes.number,
+	  color: _react2['default'].PropTypes.string,
+	  height: _react2['default'].PropTypes.string
+	};
 	module.exports = exports['default'];
 
 /***/ },
