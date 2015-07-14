@@ -46,3 +46,10 @@ ReactMediumSpinner.defaultProps = {
   color: "#60d778",
   height: "2px"
 };
+
+ReactMediumSpinner.propTypes = {
+  active: React.PropTypes.bool,
+  speed: React.PropTypes.number,
+  color: React.PropTypes.string,
+  height: React.PropTypes.string
+};
