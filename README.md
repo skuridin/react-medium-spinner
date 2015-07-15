@@ -1,6 +1,6 @@
 # React Medium Spinner
 
-React medium-like spinner component.  
+React medium-like spinner component. JS animation. Inline styles.
 
 ## Demo
 [Live demo](https://skurid.in/react-medium-spinner/)
