@@ -98,16 +98,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    key: 'animate',
 	    value: function animate() {
 	      if (this.props.active !== true) return false;
-	      var state = this.state;
-	      if (state.left === 0 && state.width < 100) {
-	        state.width += 4;
-	      } else if (state.width <= 100 && state.left < 100) {
-	        state.left += 4;
-	        state.width -= 4;
-	      } else if (state.left === 100 && state.width === 0) {
-	        state.left = 0;
+	      var _state = this.state;
+	      var left = _state.left;
+	      var width = _state.width;
+
+	      if (left === 0 && width < 100) {
+	        width += 4;
+	      } else if (width <= 100 && left < 100) {
+	        left += 4;
+	        width -= 4;
+	      } else if (left === 100 && width === 0) {
+	        left = 0;
 	      }
-	      this.setState(state);
+	      this.setState({ left: left, width: width });
 	    }
 	  }, {
 	    key: 'render',
