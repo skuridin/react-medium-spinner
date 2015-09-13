@@ -26,5 +26,8 @@ module.exports = {
       hash: true,
       minify: { collapseWhitespace: true }
     })
-  ]
+  ],
+  devServer: {
+    host: '0.0.0.0'
+  }
 };
