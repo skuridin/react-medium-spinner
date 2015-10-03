@@ -43,8 +43,8 @@ export default class ReactMediumSpinner extends React.Component {
 ReactMediumSpinner.defaultProps = {
   active: false,
   speed: 20,
-  color: "#60d778",
-  height: "2px"
+  color: '#60d778',
+  height: '2px'
 };
 
 ReactMediumSpinner.propTypes = {
