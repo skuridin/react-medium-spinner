@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "eslint webpack.config.js src/*.jsx",
     "prebuild": "npm run lint",
-    "build": "NODE_ENV=production webpack -c -p --optimize-occurence-order --optimize-dedupe --progress",
+    "build": "NODE_ENV=production webpack -c --optimize-occurence-order --optimize-dedupe --progress",
     "postbuild": "npm run example",
     "dev": "NODE_ENV=development webpack-dev-server -d --progress",
     "example": "NODE_ENV=development webpack -c -p --optimize-occurence-order --optimize-dedupe --progress"
