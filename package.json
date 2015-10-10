@@ -36,11 +36,8 @@
     "url": "git@github.com:skuridin/react-medium-spinner.git"
   },
   "license": "MIT",
-  "jshintConfig": {
-    "esnext": true
-  },
   "dependencies": {
-    "react": "0.13.x"
+    "react": ">=0.13.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.24",
@@ -48,6 +45,7 @@
     "eslint": "^1.6.0",
     "eslint-plugin-react": "^3.5.1",
     "html-webpack-plugin": "^1.6.1",
+    "react-dom": "^0.14.0",
     "webpack": "^1.12.1",
     "webpack-dev-server": "^1.10.1"
   }
