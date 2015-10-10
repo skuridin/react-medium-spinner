@@ -14,11 +14,12 @@ npm i react-medium-spinner --save
 
 ## Usage
 
-```jsx
+```js
 import React from 'react';
+// import ReactDOM from 'react'; if react 0.14.*
 import MediumSpinner from 'react-medium-spinner';
 
-React.render(
+React.render( // ReactDOM.render if react 0.14.*
   <MediumSpinner active={true}/>,
   document.getElementById('app')
 );
