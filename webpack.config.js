@@ -1,32 +1,20 @@
-var externals = [];
-var entry = './dev.jsx';
-var output = 'example.js';
-var HTMLPlugin = require('html-webpack-plugin');
-
-if(process.env.NODE_ENV === 'production') {
-  externals.push('react');
-  entry = './index.jsx';
-  output = 'index.js';
-}
-
 module.exports = {
+  devtool: 'eval',
   context: __dirname + '/src',
-  entry: entry,
+  entry: './dev',
   output: {
-    path: __dirname,
-    filename: output,
-    library: 'ReactMediumSpinner',
-    libraryTarget: 'umd'
+    path: __dirname + '/dist',
+    filename: 'index.js'
   },
-  externals: externals,
-  module: { loaders: [{ test: /\.jsx$/, loader: 'babel' }] },
-  plugins: [
-    new HTMLPlugin({
-      template: './src/template.html',
-      hash: true,
-      minify: { collapseWhitespace: true }
-    })
-  ],
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        include: __dirname + '/src',
+        loader: 'babel'
+      }
+    ]
+  },
   devServer: {
     host: '0.0.0.0'
   }
