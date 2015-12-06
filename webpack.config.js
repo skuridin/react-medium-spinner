@@ -4,18 +4,18 @@ module.exports = {
   entry: './dev',
   output: {
     path: __dirname + '/dist',
-    filename: 'index.js'
+    filename: 'index.js',
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
         include: __dirname + '/src',
-        loader: 'babel'
-      }
-    ]
+        loader: 'babel',
+      },
+    ],
   },
   devServer: {
-    host: '0.0.0.0'
-  }
+    host: '0.0.0.0',
+  },
 };

@@ -12,7 +12,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline"
+    "dev": "webpack-dev-server --inline",
+    "lint": "eslint ./webpack.config.js ./src/"
   },
   "keywords": [
     "react",
@@ -39,6 +40,9 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }

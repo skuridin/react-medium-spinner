@@ -1,13 +1,15 @@
 export default function calculate(left, width, step) {
-  if (left === 0 && width < 100) {
-    width += step;
-    if (width > 100) width = 100;
-  } else if (width <= 100 && left < 100) {
-    left += step;
-    width -= step;
-  } else if (left >= 100 && width <= 0) {
-    left = 0;
+  let newLeft = left;
+  let newWidth = width;
+  if (newLeft === 0 && newWidth < 100) {
+    newWidth += step;
+    if (newWidth > 100) newWidth = 100;
+  } else if (newWidth <= 100 && newLeft < 100) {
+    newLeft += step;
+    newWidth -= step;
+  } else if (newLeft >= 100 && newWidth <= 0) {
+    newLeft = 0;
   }
 
-  return { width, left };
-};
+  return { newWidth, newLeft };
+}
