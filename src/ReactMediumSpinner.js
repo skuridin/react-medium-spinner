@@ -26,7 +26,7 @@ const ReactMediumSpinner = React.createClass({
   },
   _animate() {
     const step = 100 / 60 / (this.props.duration / 1000);
-    this.setState(calculate(this.state.left, this.state.width, step));
+    this.setState(calculate(this.state.width, this.state.left, step));
     requestAnimationFrame(this._animate);
   },
   render() {
