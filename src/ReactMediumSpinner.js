@@ -30,17 +30,19 @@ const ReactMediumSpinner = React.createClass({
     requestAnimationFrame(this._animate);
   },
   render() {
+    const style = {
+      display: 'block',
+      position: 'fixed',
+      top: 0,
+      left: `${this.state.left}%`,
+      width: `${this.state.width}%`,
+      height: this.props.height,
+      backgroundColor: this.props.color,
+      zIndex: 2200,
+    };
+
     return (
-      <div style={{
-        display: 'block',
-        position: 'fixed',
-        top: 0,
-        left: `${this.state.left}%`,
-        width: `${this.state.width}%`,
-        height: this.props.height,
-        backgroundColor: this.props.color,
-        zIndex: 2200,
-      }} />
+      <div style={style} />
     );
   },
 });
