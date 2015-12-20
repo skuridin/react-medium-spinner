@@ -2,33 +2,28 @@ import React from 'react';
 import requestAnimationFrame from './raf';
 import calculate from './calculate';
 
-const ReactMediumSpinner = React.createClass({
-  propTypes: {
-    height: React.PropTypes.string,
-    color: React.PropTypes.string,
-    duration: React.PropTypes.number,
-  },
-  getDefaultProps() {
-    return {
-      height: '2px',
-      color: '#60d778',
-      duration: 500,
-    };
-  },
-  getInitialState() {
-    return {
+export default class ReactMediumSpinner extends React.Component {
+  constructor(params) {
+    super(params);
+
+    this.state = {
       width: 0,
       left: 0,
     };
-  },
+
+    this._animate = this._animate.bind(this);
+  }
+
   componentDidMount() {
     requestAnimationFrame(this._animate);
-  },
+  }
+
   _animate() {
     const step = 100 / 60 / (this.props.duration / 1000);
     this.setState(calculate(this.state.width, this.state.left, step));
     requestAnimationFrame(this._animate);
-  },
+  }
+
   render() {
     const style = {
       display: 'block',
@@ -41,10 +36,18 @@ const ReactMediumSpinner = React.createClass({
       zIndex: 2200,
     };
 
-    return (
-      <div style={style} />
-    );
-  },
-});
+    return <div style={style} />;
+  }
+}
 
-export default ReactMediumSpinner;
+ReactMediumSpinner.propTypes = {
+  height: React.PropTypes.string,
+  color: React.PropTypes.string,
+  duration: React.PropTypes.number,
+};
+
+ReactMediumSpinner.defaultProps = {
+  height: '2px',
+  color: '#60d778',
+  duration: 500,
+};
