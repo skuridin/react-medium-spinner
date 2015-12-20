@@ -12,8 +12,10 @@
   ],
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline",
-    "lint": "eslint ./webpack.config.js ./src/",
+    "build": "NODE_ENV=production webpack --config ./webpack/production.js",
+    "example": "NODE_ENV=production webpack --config ./webpack/example.js",
+    "dev": "webpack-dev-server --inline --config ./webpack/dev.js",
+    "lint": "eslint ./webpack/ ./src/",
     "test": "mel ./src/**/__tests__/*-test.js"
   },
   "keywords": [
@@ -44,6 +46,7 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
     "eslint-plugin-react": "^3.11.3",
+    "lodash": "^3.10.1",
     "mel": "^0.1.0",
     "tape": "^4.2.2",
     "webpack": "^1.12.9",
